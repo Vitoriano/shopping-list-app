@@ -4,6 +4,9 @@ import { Link, useRouter } from "expo-router";
 import { useState } from "react";
 import { View } from "react-native";
 
+import Button from "@/components/ui/button";
+import TextInput from "@/components/ui/text-input";
+
 export default function SignInScreen() {
 
   const { signIn, setActive, isLoaded } = useSignIn();
@@ -18,6 +21,8 @@ export default function SignInScreen() {
       <ThemedText type="title">
         SignIn
       </ThemedText>
+      <TextInput label="E-mail" placeholder="Enter email"/>
+      <Button>Sign In</Button>
       <Link href={"/sign-up"}>Go to Sign In</Link>
     </View>
   )
